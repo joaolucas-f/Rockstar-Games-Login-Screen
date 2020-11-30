@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "ubuntu", sans-serif;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: #fdcf74;
+}
+
+body{
+    background-image: url(../img/bg.png);
+    background-size: 256px;
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.form{
+    width: 100%;
+    max-width: 500px;
+}
+
+.logo{
+    background-image: url(../img/logo.svg);
+    width: 290px;
+    height: 92px;
+    margin: 40px auto;
+}
+
+.container{
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    color: #4d4d4d;
+}
+
+
+.container h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.field{
+    height: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.field input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e6e6e6;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #666;
+    border-radius: 3px;
+}
+
+
+.placeholder{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    pointer-events: none;
+    font-size: 17px;
+    transform-origin: 0 0;
+    .transition: .2s linear;
+}
+
+
+.field input:not(:placeholder-shown) + .placeholder{
+    transform: scale(.75) translateY(-26px);
+}
+
+.field input:not(:placeholder-shown){
+    padding-top: 12px;
+}
+
+.field input:not(:placeholder-shown){
+    padding-top: 12px;
+}
+
+.checkbox{
+    display: inline-block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
+
+.checkbox input{
+    display: none;
+}
+
+.checkbox span::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #4d4d4d;
+    left: 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+
+.checkbox span::after{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    border-bottom: 2px solid #333;
+    border-left: 2px solid #333;
+    transform: rotate(-50deg);
+    box-sizing: border-box;
+    left: 4px;
+    top: 6px;
+    display: none;
+}
+
+.checkbox input:checked + span::after{
+    display: block;
+}
+
+.forgot-login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.link{
+    color: #fcaf17;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.link:hover{
+   
+    text-decoration: underline;
+    
+}
+
+.forgot-login input{
+    width: 100px;
+    height: 38px;
+    border: none;
+    background-image: linear-gradient(90deg, #f7931e, #fcaf17);
+    color: white;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.forgot-login input:hover{
+    background: #fcaf17;
+}
+
+
+.container-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-bottom h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-login{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-login a{
+width: 38px;
+margin: 0 5px;
+overflow: hidden;
+}
+
+.social-login a img{
+    width: 100%;
+}
+
+
+.create-account{
+text-align: center;
+color: white;
+}
+
+
+.copyrights-footer{
+color: white;
+font-size: 12px;
+}
